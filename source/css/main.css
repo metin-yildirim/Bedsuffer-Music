@@ -1,0 +1,27 @@
+html,body{
+color: white;
+}
+
+html{
+overflow-x:hidden;
+height: 100%;
+position: relative;
+}
+
+body{
+background-color: #000;
+font-family: Roboto, sans-serif, arial;
+font-size: 12px;
+font-weight: 400;
+height: 100%;
+}
+
+a, a:hover, a:active{
+color: white;
+cursor: pointer;
+text-decoration: none
+}
+
+table{
+border: 0;
+}
