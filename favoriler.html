@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BedSuffer</title>
+	<link rel="stylesheet" href="source/css/main.css">
+	<style type="text/css">
+	html,body{
+		background: #000 url("source/img/bg2.jpg") no-repeat 100%/cover;
+		background-attachment: fixed;
+	}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+function nofav(){
+	localStorage.favlist='';
+	}
+	
+	function hook(){
+		var clean =  [];
+		var arp = localStorage.favlist.split(',');
+		for (vid in arp){
+			if (clean.indexOf(arp[vid]) || arp[vid]!='') {
+				clean.push(arp[vid]);
+			}
+		}
+
+		for(vid in clean){
+document.write('<tr><td width="45"></td><td width="290"><a href="footer.html?vid='+clean[vid]+'" target="footer">'+clean[vid]+'</a></td><td width="128"></td><td width="196"></td><td></td></tr><!-- Track -->');}
+
+}
+</script>
+
+<table width="780" cellspacing="4" cellpadding="5" valign="middle" align="center">
+<tr>
+<td width="45"></td>
+<td width="290"><a onclick="nofav()">Favorileri Sil</a></td>
+<td width="128"></td>
+<td width="196"></td>
+<td></td>
+</tr>
+
+<script type="text/javascript">hook();</script>
+
+</table>
+
+
+</body>
+</html>
